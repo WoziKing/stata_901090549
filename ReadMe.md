@@ -14,5 +14,6 @@
 >   > * exer1.do  练习1do文件
 >   > * reference.do  练习1参考do文件
 >   > * 练习要求.md
+> * code.md  常用命令
 > * ReadMe.md  本文
 > * website.jpg  相关网站
