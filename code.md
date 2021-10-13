@@ -3,8 +3,11 @@
 #### 2.1.1 文件读取
 > `use [var] [if] [in] using filename [,clear nolabel]`  
 > *use 命令若文件无扩展名，则默认读取.dat文件*
-> * `nolabel` 清除数据中的变量的值的标签
-> * `clear` 清除程序已读数据  
+> > 可选参数 | 作用
+> > ------------ | -------------
+> > nolabel | 清除数据中的变量的值的标签
+> > clear | 清除程序已读数据  
+
   
 #### 2.1.2 文件导入
 ###### 2.1.2-1 Excel文件
@@ -29,9 +32,11 @@
 > > * `replace` 覆盖原有数据
 > > * `orphans` 保存所有值标签  
   
+##### 2.1.4 文件导出
+
 ##### 数据输入
-> `input [var1] [var2] ...`
-> `[var1_value1] [var2_value1]`
-> `[var1_value2] [var2_value2]`
-> `... ...`
-> `end`
+> `input [var1] [var2] ...`  
+> `[var1_value1] [var2_value1]`  
+> `[var1_value2] [var2_value2]`  
+> `... ...`  
+> `end`  
