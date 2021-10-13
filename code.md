@@ -8,6 +8,7 @@
 > > nolabel | 清除数据中的变量的值的标签
 > > clear | 清除程序已读数据  
   
+  
 ### 2.1.2 文件导入
 ##### 2.1.2-1 Excel文件
 > *导入整个Excel*  
@@ -33,6 +34,7 @@
 > > comma | 指定英文逗号进行分隔  
 > > delimiters("chars") | 指定分隔符
   
+
 ### 2.1.3 文件保存
 > `save [filename] [, save_options]`
 > > 可选参数 | 作用
@@ -40,6 +42,7 @@
 > > replace | 覆盖原有数据
 > > orphans | 保存所有值标签  
   
+
 ### 2.1.4 文件导出
 ##### 2.1.4-1 Excel文件
 > `export excel [using] filename [if] [in] [, export_excel_options]`
@@ -47,6 +50,7 @@
 > `outfile [varlist] using filename [if] [in] [, options]`
   
   
+
 ## 2.2 数据查增删改
 ### 2.2.1 数据查询
 ##### 2.2.1-1 数据查询列表
@@ -54,7 +58,10 @@
 ##### 2.2.1-2 数据属性查询
 > `describe [varlist], [simple/short]`  
 > `describe [varlist] using filename, [simple/short]`
+##### 2.2.1-2 数据排序
+> `gsort [-] varname [[-] varname …] [, generate (newvar) mfirst]`
   
+
 ### 2.2.2 数据增加
 ##### 2.2.2-1 数据输入增加
 > `input [var1] [var2] ...`  
@@ -62,3 +69,50 @@
 > `[var1_value2] [var2_value2] ...`  
 > `... ... ...`  
 > `end`  
+##### 2.2.2-2 新建变量
+> `generate [type] newvar=exp [if] [in]`
+> *exp为新变量生成的规则，数学表达式*
+  
+
+### 2.2.3 数据删除与保留
+##### 2.2.3-1 数据删除
+> `drop varlist`
+##### 2.2.3-2 数据保留
+> `keep varlist`
+  
+
+### 2.2.4 数据更改
+##### 2.2.4-1 变量名更改
+> `rename old_var new_var`  
+> `rename (old1 old2 ...) (new1 new2 ...)`
+> *t\*代表以t开头的变量*
+##### 2.2.4-2 值更改
+> `replace oldvar=exp [if] [in] [, nopromote]`
+##### 2.2.4-3 标签更改
+> *定义数据标签*  
+> `label data "label"`
+> *定义变量标签*  
+> `label var varname "label"`
+##### 2.2.4-4 值标签更改
+> *定义值变量标签*  
+> `label define lblname # "label" [# "label" ...] [, add modify replace nofix]`
+> *将值标签指定到分类变量上*  
+> `label values varlist [lblname|.] [, nofix]`
+> *删除值标签*  
+> `label drop {lblname [lblname ...] | _all}`
+##### 2.2.4-5 将变量分类
+> `recode varlist (rule) [(rule) ...] [, generate(newvar)]`
+> *示例：`recode leng (142/170 = 1 "A级车") (171/204 = 2 "B级车") (205/233 = 3 "C级车") ,generate(lengtype)`*
+##### 2.2.4-6 数据类型更改
+> `format varlist %fmt`  
+##### 2.2.4-7 字符串型变量与数值型变量间的互换
+###### 2.2.4-7.1 encode与decode
+> *字符串——>数值*  
+> `encode varname [if] [in], generate(newvar) [label (name) noextend]`  
+> *数值——>字符串*  
+> `decode varname [if] [in], generate(newvar) [maxlength(#)]`  
+###### 2.2.4-7.2 destring与tostring
+> *字符串——>数值*  
+> `destring [varlist] , {generate(newvarlist)|replace} [destring_options]`  
+> *数值——>字符串*  
+> `tostring varlist , {generate(newvarlist)|replace} [tostring_options]`  
