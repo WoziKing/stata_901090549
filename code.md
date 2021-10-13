@@ -1,7 +1,7 @@
 # chapter2 数据文件建立和管理
 ## 2.1 文件读取、导入、保存
 #### 2.1.1 文件读取
-> `use [var] [if] [in] using filename [,clear nolabel]`
+> `use [var] [if] [in] using filename [,clear nolabel]`  
 > *use 命令若文件无扩展名，则默认读取.dat文件*
 > * `nolabel` 清除数据中的变量的值的标签
 > * `clear` 清除程序已读数据  
@@ -9,7 +9,7 @@
 #### 2.1.2 文件导入
 ###### 2.1.2-1 Excel文件
 > *导入整个Excel*  
->  `import excel [using] filename [,import_excel_options]`
+>  `import excel [using] filename [,import_excel_options]`  
 > *导入Excel的部分变量*  
 >  `import excel extvarlist using filename [, import_excel_options]`
 > > * `sheet("sheetname")` 选取工作簿
@@ -26,7 +26,8 @@
   
 ##### 2.1.3 文件保存
 > `save [filename] [, save_options]`
-> > * `tab` 指定tab进行分隔  
+> > * `replace` 覆盖原有数据
+> > * `orphans` 保存所有值标签  
   
 ##### 数据输入
 > `input [var1] [var2] ...`
