@@ -8,7 +8,7 @@
 > > nolabel | 清除数据中的变量的值的标签
 > > clear | 清除程序已读数据  
   
-  
+
 ### 2.1.2 文件导入
 ##### 2.1.2-1 Excel文件
 > *导入整个Excel*  
@@ -70,7 +70,7 @@
 > `... ... ...`  
 > `end`  
 ##### 2.2.2-2 新建变量
-> `generate [type] newvar=exp [if] [in]`
+> `generate [type] newvar=exp [if] [in]`  
 > *exp为新变量生成的规则，数学表达式*
   
 
@@ -84,24 +84,24 @@
 ### 2.2.4 数据更改
 ##### 2.2.4-1 变量名更改
 > `rename old_var new_var`  
-> `rename (old1 old2 ...) (new1 new2 ...)`
+> `rename (old1 old2 ...) (new1 new2 ...)`  
 > *t\*代表以t开头的变量*
 ##### 2.2.4-2 值更改
 > `replace oldvar=exp [if] [in] [, nopromote]`
 ##### 2.2.4-3 标签更改
 > *定义数据标签*  
-> `label data "label"`
+> `label data "label"`  
 > *定义变量标签*  
 > `label var varname "label"`
 ##### 2.2.4-4 值标签更改
 > *定义值变量标签*  
-> `label define lblname # "label" [# "label" ...] [, add modify replace nofix]`
+> `label define lblname # "label" [# "label" ...] [, add modify replace nofix]`  
 > *将值标签指定到分类变量上*  
 > `label values varlist [lblname|.] [, nofix]`
 > *删除值标签*  
 > `label drop {lblname [lblname ...] | _all}`
 ##### 2.2.4-5 将变量分类
-> `recode varlist (rule) [(rule) ...] [, generate(newvar)]`
+> `recode varlist (rule) [(rule) ...] [, generate(newvar)]`  
 > *示例：`recode leng (142/170 = 1 "A级车") (171/204 = 2 "B级车") (205/233 = 3 "C级车") ,generate(lengtype)`*
 ##### 2.2.4-6 数据类型更改
 > `format varlist %fmt`  
