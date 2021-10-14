@@ -97,7 +97,7 @@
 > *定义值变量标签*  
 > `label define lblname # "label" [# "label" ...] [, add modify replace nofix]`  
 > *将值标签指定到分类变量上*  
-> `label values varlist [lblname|.] [, nofix]`
+> `label values varlist [lblname|.] [, nofix]`  
 > *删除值标签*  
 > `label drop {lblname [lblname ...] | _all}`
 ##### 2.2.4-5 将变量分类
