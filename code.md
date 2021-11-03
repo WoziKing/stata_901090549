@@ -9,7 +9,7 @@
        * ### <a href='#2.1.4'>2.1.4 文件导出</a>
            - ### <a href='#2.1.4-1'>2.1.2-1 Excel文件</a>
            - ### <a href='#2.1.4-2'>2.1.2-2 纯文本文件</a>
-   * ### <a href='#2.2'>2.2 数据查增删改</a>
+   * ### <a href='#2.2'>2.2 数据查、增、删、改</a>
        * ### <a href='#2.2.1'>2.2.1 数据查询</a>
            - ### <a href='#2.2.1-1'>2.2.1-1 数据查询列表</a>
            - ### <a href='#2.2.1-2'>2.2.1-2 数据属性查询</a>
@@ -39,6 +39,14 @@
        * ### <a href='#3.2.1'>3.2.1 对单一变量做频数分析</a>  
        * ### <a href='#3.2.2'>3.2.2 对单一变量做描述性统计分析</a>  
        * ### <a href='#3.2.3'>3.2.3 列联表</a>  
+## <a href='#chapter4'>chapter4 统计图绘制（初级篇）</a>
+   * ### <a href='#4.1'>4.1 统计图简介</a>  
+       * ### <a href='#4.1.1'>4.1.1 统计图的构成要素</a>  
+       * ### <a href='#4.1.2'>4.1.2 统计图的分类</a>  
+   * ### <a href='#4.2'>4.2 统计图生成</a>  
+       * ### <a href='#4.2.1'>4.2.1 柱状图</a>  
+       * ### <a href='#4.2.2'>4.2.2 饼图</a>  
+       * ### <a href='#4.2.3'>4.2.3 二维图</a>  
 
 <br>
 
@@ -74,8 +82,6 @@ firstrow | 将第一行视为变量名
 ------- | --------
 delimiters("chars") | 指定分隔符  
 
-<br>
-
 `insheet [varlist] using filename [, options]`  
 *insheet 命令被 import delimited 命令取代，虽 insheet 命令仍然继续工作，但从STATA 13开始，insheet 不再是官方的一部分*
 可选参数 | 作用
@@ -96,10 +102,8 @@ orphans | 保存所有值标签
 `export excel [using] filename [if] [in] [, export_excel_options]`
 ##### <a id='2.1.4-2'>2.1.4-2 纯文本文件</a>
 `outfile [varlist] using filename [if] [in] [, options]`
-  
-<br>
 
-## <a id='2.2'>2.2 数据查增删改</a>
+## <a id='2.2'>2.2 数据查、增、删、改</a>
 ### <a id='2.2.1'>2.2.1 数据查询</a>
 ##### <a id='2.2.1-1'>2.2.1-1 数据查询列表</a>
 `list [varlist] [if] [in] [, options]`
@@ -316,9 +320,9 @@ nofreq | 不显示频数
 > (1978 Automobile Data)  
 > 
 > · `tab2 foreign rep78 ,col nofreq`  
-> 
+>   
 > \-> tabulation of foreign by rep78  
->   \
+>   
 > $~~~~~~~~~~~~~~~~$ | $~~~~~~~~~~~~~~~~$ Repair Record 1978  
 >  Car type $~~~$ | $~~~~~$ 1 $~~~~~~~~~~$ 2 $~~~~~~~~~$ 3 $~~~~~~~~$ 4 $~~~~~~~~$ 5 $~~~~~$ | $~~$ Total  
 > ------------+-------------------------------------------------+----------  
@@ -327,4 +331,79 @@ nofreq | 不显示频数
 > ------------+-------------------------------------------------+----------  
 >  Total $~~~~~~~~$ | $~$ 100.00 $~$ 100.00 $~~$ 100.00 $~$ 100.00 $~$ 100.00 $~$ | $~~$ 100.00   
 
+<br>
+
+***
+<br>
+
+# <a id='chapter4'>chapter4 统计图绘制（初级篇）</a>
+## <a id='4.1'>4.1 统计图简介</a>
+### <a id='4.1.1'>4.1.1 统计图的构成要素</a>
+一般的统计图由六项构成：
+ 1. 曲线 （构成统计图的点、线、面）
+ 2. 标题
+ 3. 坐标轴 （如果是双变量的统计图，则会有横纵坐标；如果是单变量的统计图，则有一个隐含的坐标轴）
+ 4. 图例  
+ 5. 脚注 （note）
+ 6. 插文 （caption）  
+  
+*例：*  
+> · `use auto`  
+> (1978 Automobile Data)  
+>    
+> · `graph bar (mean) price , ///`   
+> `over(foreign) ///`  
+> `ytitle(平均价格) ///`  
+> `title(国产汽车与国外汽车的平均价格, position(6) margin(medium)) ///`  
+> `caption(图中反映的是国产汽车与国外汽车的平均价格, size(small)) ///`  
+> `note(数据来源：stata默认数据) legend(on position(6))`  
+
+本例中的图形生成结果如下：  
+<img src='./code_img/img_graph_eg.png' style='max-width:500px'>  
+其中，红色虚线框内的部分（已经标出数字）分别对应了上述的六项统计图构成要素。  
+
+### <a id='4.1.2'>4.1.2 统计图的分类</a>
+一般来说，统计图可以分成一维图、二维图、矩阵图、时序检验图这几类。
+* 一维图  
+   * 柱状图  bar
+   * 箱型图  box
+   * 饼图    pie
+* 二维图
+   * 散点图  scatter
+   * 折线图  line
+   * 区域图  area
+   * 线性拟合图  lfit
+   * 非线性拟合图  gfit
+   * 直方图  histogram
+   * 密度函数图  kdensity
+   * 函数图  function
+* 矩阵图
+* 时序检验图
+   * 自相关系数图  ac
+   * 偏相关系数图  pac
+   * 脉冲响应函数图  irf
+
+## <a id='4.2'>4.2 统计图生成</a>
+统计图的生成不会增加、更改、删除原数据，并且统计图类型多样，每一统计图根据需求的不同又会有不同的样式，因此建议使用图形窗口来生成统计图。  
+### <a id='4.2.1'>4.2.1 柱状图</a>
+`graph bar  yvars [if] [in] [weight] [, options]`  
+`graph hbar yvars [if] [in] [weight] [, options]`  
+### <a id='4.2.2'>4.2.2 饼图</a>
+`graph pie varlist [if] [in] [weight] [, options]`  
+`graph pie varname [if] [in] [weight], over(varname) [options]`
+### <a id='4.2.3'>4.2.3 二维图</a>
+`[graph] twoway plot [if] [in] [, twoway_options]`  
+
+*例：*  
+> · `use auto`  
+> (1978 Automobile Data)  
+>      
+> · `twoway (scatter price weight, mcolor(gold) msymbol(smx)) (lfitci price weight, lcolor(red) fcolor(%50) alwidth(0)) , ///`   
+> `ytitle(价格) ytitle(, margin(medium)) ymtick(##5) ///`  
+> `xtitle(车重) xtitle(, margin(medium)) xlabel(#5) xmtick(##5) ///`   
+> `title(车重与价格的散点线性拟合图, size(large) position(6)) ///`   
+> `caption(数据来源：stata) ///`   
+> `legend(on cols(3) position(6))`  
+>   
+> <img src='./code_img/img_graph_twoway.png' style='max-width:500px'>   
 
