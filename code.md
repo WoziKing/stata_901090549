@@ -204,20 +204,20 @@ detail | 追加更多统计指标
 > (1978 Automobile Data) 
 >  
 > · `summarize price ,detail`  
-> $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ Price  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price  
 > \----------------------------------------------------------------  
-> $~~~~~~~~$ Percentiles $~~~~~~~$ Smallest  
->  1% $~~~~~~~$ 3291 $~~~~~~~~~~~~$ 3291  
->  5% $~~~~~~~$ 3748 $~~~~~~~~~~~~$ 3299  
-> 10% $~~~~~$ 3895 $~~~~~~~~~~~~$ 3667 $~~~~~~$ Obs $~~~~~~~~~~~~~~~$ 74  
-> 25% $~~~~~$ 4195 $~~~~~~~~~~~~$ 3748 $~~~~~~$ Sum of Wgt. $~~~$ 74  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Percentiles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Smallest  
+>  1% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3291 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3291  
+>  5% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3748 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3299  
+> 10% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3895 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3667 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Obs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 74  
+> 25% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4195 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3748 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sum of Wgt. &nbsp;&nbsp;&nbsp; 74  
 >
-> 50% $~~~~~$ 5006.5 $~~~~~~~~~~~~~~~~~~~~~~~~$ Mean $~~~~~~~~~~~~~$ 6165.257  
-> $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ Largest $~~~$ Std. Dev. $~~~~~~~~$ 2949.496  
-> 75% $~~~~~$ 6342 $~~~~~~~~~~~~$ 13466  
-> 90% $~~~~~$ 11385 $~~~~~~~~~~$ 13594 $~~~~$ Variance $~~~~~~~~~$ 8699526  
-> 95% $~~~~~$ 13466 $~~~~~~~~~~$ 14500 $~~~~$ Skewness $~~~~~~~$ 1.653434  
-> 99% $~~~~~$ 15906 $~~~~~~~~~~$ 15906 $~~~~$ Kurtosis $~~~~~~~~~$ 4.819188  
+> 50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5006.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mean &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6165.257  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Largest &nbsp;&nbsp;&nbsp; Std. Dev. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2949.496  
+> 75% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6342 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13466  
+> 90% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11385 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13594 &nbsp;&nbsp;&nbsp;&nbsp; Variance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8699526  
+> 95% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13466 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14500 &nbsp;&nbsp;&nbsp;&nbsp; Skewness &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.653434  
+> 99% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15906 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15906 &nbsp;&nbsp;&nbsp;&nbsp; Kurtosis &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.819188  
 
 统计指标 | 描述
 ------- | --------
@@ -243,9 +243,9 @@ statistics(statname [...]) | 指定统计指标（默认为均值）
 > (1978 Automobile Data)  
 > 
 > · `tabstat price ,statistics(variance)`  
-> $~~$ variable $~~~$| variance  
+> &nbsp;&nbsp; variable &nbsp;&nbsp;&nbsp;| variance  
 > \-------------+----------  
-> $~~~~~~$ price $~~$ | 8699526  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; price &nbsp;&nbsp; | 8699526  
 > \------------------------  
   
 ### <a id='3.1.3'>3.1.3 描述数据内容</a>
@@ -261,23 +261,23 @@ statistics(statname [...]) | 指定统计指标（默认为均值）
 > (1978 Automobile Data)  
 > 
 > · `tabulate price`  
-> $~~~~$ Price $~~~$ | $~~~$ Freq. $~~~$ Percent $~~~$ Cum.  
+> &nbsp;&nbsp;&nbsp;&nbsp; Price &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Freq. &nbsp;&nbsp;&nbsp; Percent &nbsp;&nbsp;&nbsp; Cum.  
 > \------------+-----------------------------------  
-> $~~~$ 3,291 $~~~$ | $~~~~~$ 1 $~~~~~~~~~$ 1.35 $~~~~~~$ 1.35  
-> $~~~$ 3,299 $~~~$ | $~~~~~$ 1 $~~~~~~~~~$ 1.35 $~~~~~~$ 2.70  
-> $~~~$ ........... $~~~$ | $~~~~~$ ... $~~~~~~~~~~~$ ... $~~~~~~~~~$ ...  
-> $~~~$ 15,906 $~$ | $~~~~~$ 1 $~~~~~~~~~$ 1.35 $~~~~~~$ 100.00  
+> &nbsp;&nbsp;&nbsp; 3,291 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.35 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.35  
+> &nbsp;&nbsp;&nbsp; 3,299 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.35 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.70  
+> &nbsp;&nbsp;&nbsp; ........... &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...  
+> &nbsp;&nbsp;&nbsp; 15,906 &nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.35 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100.00  
 > \------------+-----------------------------------  
-> $~~~$ Total $~~~~$ | $~~~~$ 74 $~~~~~~~$ 100.00  
+> &nbsp;&nbsp;&nbsp; Total &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; 74 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100.00  
 > 
 > · `tabulate foreign`  
 >
-> $~~~$ Car type $~~~$ | $~~$ Freq. $~~~~$ Percent $~~~~$ Cum.  
+> &nbsp;&nbsp;&nbsp; Car type &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp; Freq. &nbsp;&nbsp;&nbsp;&nbsp; Percent &nbsp;&nbsp;&nbsp;&nbsp; Cum.  
 > \---------------+----------------------------------  
-> $~~~$ Domestic $~$ | $~~~~$ 52 $~~~~~~~~$ 70.27 $~~~~~$ 70.27  
-> $~~~$ Foreign $~~~~$ | $~~~~$ 22 $~~~~~~~~$ 29.73 $~~~~~$ 100.00  
+> &nbsp;&nbsp;&nbsp; Domestic &nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; 52 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 70.27 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 70.27  
+> &nbsp;&nbsp;&nbsp; Foreign &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; 22 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 29.73 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100.00  
 > \---------------+----------------------------------  
-> $~~~$ Total $~~~~~~~~$ | $~~~~$ 74 $~~~~~~~~$ 100.00  
+> &nbsp;&nbsp;&nbsp; Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp; 74 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100.00  
 
 ### <a id='3.2.2'>3.2.2 对单一变量做描述性统计分析</a>  
 `tabulate varname1 [varname2] [if] [in] [weight] [, options]`  
@@ -294,15 +294,15 @@ summarize(varname3) | 单个或两个分类变量的描述性统计
 > (1978 Automobile Data)  
 >   
 > · `tabulate foreign rep78, summarize(price) means`  
-> $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ Means of Price  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Means of Price  
 >   
-> $~~~~~~~~~~~~~~~~~$ | $~~~~~~~~~~~~~~~~~~~~~~~~$ Repair Record 1978  
-> $~$ Car type $~~$ | $~~~~~~$ 1 $~~~~~~~~~~~~$ 2 $~~~~~~~~~~~~~~~$ 3 $~~~~~~~~~~~~~~$ 4 $~~~~~~~~~~~~~$ 5 $~~~~~~~~~~$ | $~$ Total  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Repair Record 1978  
+> &nbsp; Car type &nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp; Total  
 > -------------+-------------------------------------------------------------------+------------  
-> $~$ Domestic $~$ | $~~$ 4,564.5 $~~$ 5,967.625 $~~$ 6,607.074 $~~$ 5,881.556 $~~~$ 4,204.5 $~~~~~$ | $~$ 6,179.25  
-> $~$ Foreign $~~~~$ | $~~~~~~~$ . $~~~~~~~~~~~~$ . $~~~~~~~~~~$ 4,828.667 $~~$ 6,261.444 $~~$ 6,292.667 $~~$ | $~$ 6,070.143  
+> &nbsp; Domestic &nbsp; | &nbsp;&nbsp; 4,564.5 &nbsp;&nbsp; 5,967.625 &nbsp;&nbsp; 6,607.074 &nbsp;&nbsp; 5,881.556 &nbsp;&nbsp;&nbsp; 4,204.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp; 6,179.25  
+> &nbsp; Foreign &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4,828.667 &nbsp;&nbsp; 6,261.444 &nbsp;&nbsp; 6,292.667 &nbsp;&nbsp; | &nbsp; 6,070.143  
 > -------------+-------------------------------------------------------------------+------------  
-> $~$ Total $~~~~~~~~$ | $~~$ 4,564.5 $~~$ 5,967.625 $~~$ 6,429.233 $~~~~$ 6,071.5 $~~~~~~$ 5,913 $~~~~~~$ | $~$ 6,146.043  
+> &nbsp; Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp; 4,564.5 &nbsp;&nbsp; 5,967.625 &nbsp;&nbsp; 6,429.233 &nbsp;&nbsp;&nbsp;&nbsp; 6,071.5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5,913 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp; 6,146.043  
 
 
 ### <a id='3.2.3'>3.2.3 列联表</a>
@@ -323,13 +323,13 @@ nofreq | 不显示频数
 >   
 > \-> tabulation of foreign by rep78  
 >   
-> $~~~~~~~~~~~~~~~~$ | $~~~~~~~~~~~~~~~~$ Repair Record 1978  
->  Car type $~~~$ | $~~~~~$ 1 $~~~~~~~~~~$ 2 $~~~~~~~~~$ 3 $~~~~~~~~$ 4 $~~~~~~~~$ 5 $~~~~~$ | $~~$ Total  
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Repair Record 1978  
+>  Car type &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp; Total  
 > ------------+-------------------------------------------------+----------  
->  Domestic $~$ | $~~$ 100.00 $~~$ 100.00 $~~$ 90.00 $~~$ 50.00 $~~$ 18.18 $~~$ | $~~$ 69.57   
->  Foreign $~~~~$ | $~~$ 0.00 $~~~~~~$ 0.00 $~~~~~$ 10.00 $~~$ 50.00 $~~$ 81.82 $~~$ | $~~$ 30.43   
+>  Domestic &nbsp; | &nbsp;&nbsp; 100.00 &nbsp;&nbsp; 100.00 &nbsp;&nbsp; 90.00 &nbsp;&nbsp; 50.00 &nbsp;&nbsp; 18.18 &nbsp;&nbsp; | &nbsp;&nbsp; 69.57   
+>  Foreign &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp; 0.00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.00 &nbsp;&nbsp; 50.00 &nbsp;&nbsp; 81.82 &nbsp;&nbsp; | &nbsp;&nbsp; 30.43   
 > ------------+-------------------------------------------------+----------  
->  Total $~~~~~~~~$ | $~$ 100.00 $~$ 100.00 $~~$ 100.00 $~$ 100.00 $~$ 100.00 $~$ | $~~$ 100.00   
+>  Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp; 100.00 &nbsp; 100.00 &nbsp;&nbsp; 100.00 &nbsp; 100.00 &nbsp; 100.00 &nbsp; | &nbsp;&nbsp; 100.00   
 
 <br>
 
