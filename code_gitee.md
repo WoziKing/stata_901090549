@@ -10,7 +10,7 @@
 
 本节练习：  
 <img src='./demo1/demo-1.jpg' style='max-width:500px'>  
-<a href='https://github.com/WoziKing/stata_901090549/blob/master/demo1/demo-1.do'>练习参考</a>
+<a href='https://gitee.com/woziking/stata_901090549/blob/master/demo1/demo-1.do'>练习参考</a>
 <br>
 
 ***  
