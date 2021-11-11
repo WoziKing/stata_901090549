@@ -20,7 +20,8 @@
 ## <a id='c2.1'>2.1 文件读取、导入、保存</a>
 ### <a id='c2.1.1'>2.1.1 文件读取</a>
 `use [var] [if] [in] using filename [,clear nolabel]`  
-*use 命令若文件无扩展名，则默认读取.dat文件*
+*use 命令若文件无扩展名，则默认读取.dat文件*  
+
 可选参数 | 作用
 ------- | --------
 nolabel | 清除数据中的变量的值的标签
@@ -32,7 +33,8 @@ clear | 清除程序已读数据
 `import excel [using] filename [,import_excel_options]`
 
 *导入Excel的部分变量*  
-`import excel extvarlist using filename [, import_excel_options]`
+`import excel extvarlist using filename [, import_excel_options]`  
+
 可选参数 | 作用
 ------- | --------
 sheet("sheetname") | 选取工作簿
@@ -40,13 +42,15 @@ cellrange([start][:end]) | 选取单元格
 firstrow | 将第一行视为变量名
 
 ##### <a id='c2.1.2-2'>2.1.2-2 纯文本文件（txt、raw、csv）</a>
-`import delimited [using] filename [, import_delimited_options]`
+`import delimited [using] filename [, import_delimited_options]`  
+
 可选参数 | 作用
 ------- | --------
 delimiters("chars") | 指定分隔符  
 
 `insheet [varlist] using filename [, options]`  
-*insheet 命令被 import delimited 命令取代，虽 insheet 命令仍然继续工作，但从STATA 13开始，insheet 不再是官方的一部分*
+*insheet 命令被 import delimited 命令取代，虽 insheet 命令仍然继续工作，但从STATA 13开始，insheet 不再是官方的一部分*  
+
 可选参数 | 作用
 ------- | --------
 tab | 指定tab进行分隔
@@ -54,7 +58,8 @@ comma | 指定英文逗号进行分隔
 delimiters("chars") | 指定分隔符
   
 ### <a id='c2.1.3'>2.1.3 文件保存</a>
-`save [filename] [, save_options]`
+`save [filename] [, save_options]`  
+
 可选参数 | 作用
 ------- | --------
 replace | 覆盖原有数据
@@ -120,6 +125,7 @@ orphans | 保存所有值标签
 `format varlist %fmt`  
 
 整数数据类型  
+
 数据类型 | 含义 | 范围   
 ------- | -------- | -------   
 byte | 字节型 | (-100,+100)  
@@ -127,12 +133,14 @@ int | 一般整数型 | (-32000,+32000)
 long | 长整型 | (-2.14\*10^10, +2.14\*10^10) 
   
 小数数据类型  
+
 数据类型 | 含义 | 精度  
 ------- | -------- | -------  
 float | 浮点型 | 8位有效数字  
 double | 双精度型 | 16位有效数字  
   
 字符串数据类型  
+
 数据类型 | 含义 | 大小  
 ------- | -------- | -------  
 str | 字符串型 | # 
@@ -158,8 +166,9 @@ str | 字符串型 | #
 ## <a id='c3.1'>3.1 基本统计量</a>
 ### <a id='c3.1.1'>3.1.1 基本描述统计指标</a>
 `summarize [varlist] [if] [in] [weight] [, options]`  
-可选参数 | 作用
-------- | --------
+
+可选参数 | 作用  
+------- | --------  
 detail | 追加更多统计指标  
 
 *例：*  
@@ -197,8 +206,9 @@ Kurtosis | （正态）峰度
   
 ### <a id='c3.1.2'>3.1.2 生成统计表格</a>
 `tabstat varlist [if] [in] [weight] [, options]`  
-可选参数 | 作用
-------- | --------
+
+可选参数 | 作用  
+------- | --------  
 statistics(statname [...]) | 指定统计指标（默认为均值）  
 
 *例：*  
@@ -244,10 +254,11 @@ statistics(statname [...]) | 指定统计指标（默认为均值）
 
 ### <a id='c3.2.2'>3.2.2 对单一变量做描述性统计分析</a>  
 `tabulate varname1 [varname2] [if] [in] [weight] [, options]`  
-可选参数 | 作用
-------- | --------
-summarize(varname3) | 单个或两个分类变量的描述性统计
-[no] means | （不）包含均值
+
+可选参数 | 作用  
+------- | --------  
+summarize(varname3) | 单个或两个分类变量的描述性统计  
+[no] means | （不）包含均值  
 [no] standard | （不）包含标准差  
 [no] freq | （不）包含频数  
 [no] obs | （不）包含观测值个数  
@@ -272,8 +283,9 @@ summarize(varname3) | 单个或两个分类变量的描述性统计
 *列联表：考察两个分类变量的相关关系*  
 语法1：`tabulate varname1 varname2 [if] [in] [weight] [, options]`  
 语法2：`tab2 varlist [if] [in] [weight] [, options]`  
-可选参数 | 作用
-------- | --------
+
+可选参数 | 作用  
+------- | --------  
 row | 按行在每个格内生成频率/比重  
 col | 按列在每个格内生成频率/比重  
 nofreq | 不显示频数  
